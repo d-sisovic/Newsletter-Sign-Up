@@ -10,7 +10,7 @@ module.exports = {
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh', 'react', 'react-hooks', 'jsx-a11y', 'prettier'],
+  plugins: ['react-refresh', 'react', 'react-hooks', 'jsx-a11y'],
   parserOptions: {
     ecmaVersion: 2021,
     sourceType: 'module',
@@ -23,7 +23,7 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
-    'prettier/prettier': 'error',
+    "react/react-in-jsx-scope": "off",
     quotes: ['error', 'single'],
     semi: ['error', 'always']
   },
