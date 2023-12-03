@@ -23,49 +23,51 @@ const Root = () => {
     };
 
     return <div className={styles.container}>
-        <img src={illustrationImg} alt="illustration" className={styles.img} />
+        <div className={styles.wrapper}>
+            <img src={illustrationImg} alt="illustration" className={styles.img} />
 
-        <div className={styles.body}>
-            <h1 className="title">Stay updated!</h1>
+            <div className={styles.body}>
+                <h1 className="title">Stay updated!</h1>
 
-            <p className={styles['body__subtitle']}>Join 60,000+ product managers receiving monthly updates on:</p>
+                <p className={styles['body__subtitle']}>Join 60,000+ product managers receiving monthly updates on:</p>
 
-            <ul className={styles['body__list']}>
-                <li>
-                    <img src={iconListImg} alt="check" />
+                <ul className={styles['body__list']}>
+                    <li>
+                        <img src={iconListImg} alt="check" />
 
-                    <p>Product discovery and building what matters</p>
-                </li>
+                        <p>Product discovery and building what matters</p>
+                    </li>
 
-                <li>
-                    <img src={iconListImg} alt="check" />
+                    <li>
+                        <img src={iconListImg} alt="check" />
 
-                    <p>Measuring to ensure updates are a success</p>
-                </li>
+                        <p>Measuring to ensure updates are a success</p>
+                    </li>
 
-                <li>
-                    <img src={iconListImg} alt="check" />
+                    <li>
+                        <img src={iconListImg} alt="check" />
 
-                    <p>And much more!</p>
-                </li>
-            </ul>
+                        <p>And much more!</p>
+                    </li>
+                </ul>
 
-            <div className={styles['input__container']}>
-                <div className={styles['input__container__label']}>
-                    <label htmlFor="email">Email address</label>
+                <div className={styles['input__container']}>
+                    <div className={styles['input__container__label']}>
+                        <label htmlFor="email">Email address</label>
 
-                    {!emailState.valid && <span>Valid email required</span>}
+                        {!emailState.valid && <span>Valid email required</span>}
+                    </div>
+
+
+                    <input type="email" name="email" id="email" placeholder="email@company.com"
+                        className={`${styles['input__container__input']} ${!emailState.valid ? styles['input__container__input--invalid'] : ''}`}
+                        onChange={event => onSetEmailState(event)} />
                 </div>
 
-
-                <input type="email" name="email" id="email" placeholder="email@company.com"
-                    className={`${styles['input__container__input']} ${!emailState.valid ? styles['input__container__input--invalid'] : ''}`}
-                    onChange={event => onSetEmailState(event)} />
+                <button className={`button ${!emailState.valid ? 'button--invalid' : 'button--valid'}`} disabled={!emailState.valid} onClick={onOpenModal}>
+                    Subscribe to monthly newsletter
+                </button>
             </div>
-
-            <button className={`button ${!emailState.valid ? 'button--invalid' : 'button--valid'}`} disabled={!emailState.valid} onClick={onOpenModal}>
-                Subscribe to monthly newsletter
-            </button>
         </div>
     </div>;
 };

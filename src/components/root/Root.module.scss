@@ -1,10 +1,14 @@
 @use "../../styles/variables";
+@use "../../styles/breakpoint";
 
 .container {
+    height: 100vh;
     line-height: 150%;
 
     .img {
-        margin: 0 auto;
+        width: 100%;
+        height: 28.4rem;
+        object-fit: cover;
     }
 
     .body {
@@ -70,6 +74,40 @@
                     border: 1px solid variables.$tomato;
                     background: rgba(255, 97, 85, 0.15);
                 }
+            }
+        }
+    }
+}
+
+@include breakpoint.mq(tablet) {
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: variables.$dark-slate-gray;
+
+        .img {
+            width: 40rem;
+            height: 100%;
+            border-radius: 1rem;
+            object-position: -235px center;
+        }
+
+        .wrapper {
+            width: 100%;
+            gap: 6.4rem;
+            display: flex;
+            height: 64.1rem;
+            max-width: 92.8rem;
+            border-radius: 3.6rem;
+            flex-direction: row-reverse;
+            background: variables.$white;
+            padding: 2.4rem 2.4rem 2.4rem 6.4rem;
+
+            .body {
+                padding-left: 0;
+                padding-right: 0;
+                align-self: center;
             }
         }
     }
