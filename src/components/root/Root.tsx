@@ -64,7 +64,8 @@ const Root = () => {
                         onChange={event => onSetEmailState(event)} />
                 </div>
 
-                <button className={`button ${!emailState.valid ? 'button--invalid' : 'button--valid'}`} disabled={!emailState.valid} onClick={onOpenModal}>
+                <button className={`button ${!emailState.valid ? 'button--invalid' : 'button--valid'}`}
+                    disabled={!emailState.valid} onClick={onOpenModal}>
                     Subscribe to monthly newsletter
                 </button>
             </div>
