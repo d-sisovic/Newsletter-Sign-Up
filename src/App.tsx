@@ -1,11 +1,6 @@
 import './App.scss';
+import { Outlet } from 'react-router-dom';
 
-const App = () => {
-  return (
-    <>
-      <p>Test</p>
-    </>
-  )
-}
+const App = () => <Outlet></Outlet>;
 
-export default App
+export default App;

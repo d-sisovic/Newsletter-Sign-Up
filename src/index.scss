@@ -1,0 +1,35 @@
+@use "./styles/fonts";
+@use "./styles/reset";
+@use "./styles/variables";
+
+body {
+    font-family: "Roboto-Regular";
+    color: variables.$dark-slate-gray;
+}
+
+.title {
+    font-size: 4rem;
+    line-height: 100%;
+    font-style: normal;
+    font-family: "Roboto-Bold";
+}
+
+.button {
+    width: 100%;
+    border: none;
+    padding: 1.8rem;
+    line-height: 1.25;
+    font-size: 1.6rem;
+    text-align: center;
+    border-radius: 0.8rem;
+    color: variables.$white;
+    font-family: "Roboto-Bold";
+    background: variables.$dark-slate-gray;
+
+    &--valid,
+    &:not(.button--invalid):hover {
+        cursor: pointer;
+        box-shadow: 0px 16px 32px 0px rgba(255, 97, 85, 0.50);
+        background: linear-gradient(204deg, #FF6A3A 0%, #FF527B 100%);
+    }
+}

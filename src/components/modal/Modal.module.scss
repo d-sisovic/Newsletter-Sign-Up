@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    line-height: 150%;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 14.9rem 2.4rem 4rem 2.4rem;
+
+    .title {
+        padding-top: 4rem;
+        padding-bottom: 2.4rem;
+    }
+}
