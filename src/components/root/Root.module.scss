@@ -9,6 +9,14 @@
         width: 100%;
         height: 28.4rem;
         object-fit: cover;
+
+        &--mobile {
+            display: block;
+        }
+
+        &--desktop {
+            display: none;
+        }
     }
 
     .body {
@@ -90,7 +98,14 @@
             width: 40rem;
             height: 100%;
             border-radius: 1rem;
-            object-position: -235px center;
+
+            &--mobile {
+                display: none;
+            }
+    
+            &--desktop {
+                display: block;
+            }
         }
 
         .wrapper {

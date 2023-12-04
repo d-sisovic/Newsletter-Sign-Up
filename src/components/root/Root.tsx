@@ -3,7 +3,8 @@ import { ChangeEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import iconListImg from '../../assets/images/icon-list.svg';
 import { RoutePaths } from '../../ts/enums/route-paths.enum';
-import illustrationImg from '../../assets/images/illustration-sign-up-mobile.svg';
+import illustrationMobileImg from '../../assets/images/illustration-sign-up-mobile.svg';
+import illustrationDesktopImg from '../../assets/images/illustration-sign-up-desktop.svg';
 
 const Root = () => {
     const navigate = useNavigate();
@@ -24,7 +25,8 @@ const Root = () => {
 
     return <div className={styles.container}>
         <div className={styles.wrapper}>
-            <img src={illustrationImg} alt="illustration" className={styles.img} />
+            <img src={illustrationMobileImg} alt="illustration" className={`${styles.img} ${styles['img--mobile']}`} />
+            <img src={illustrationDesktopImg} alt="illustration" className={`${styles.img} ${styles['img--desktop']}`} />
 
             <div className={styles.body}>
                 <h1 className="title">Stay updated!</h1>
