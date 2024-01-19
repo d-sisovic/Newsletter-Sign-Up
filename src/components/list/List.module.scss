@@ -1,0 +1,13 @@
+.container {
+    gap: 1rem;
+    display: flex;
+    list-style: none;
+    padding-bottom: 4rem;
+    flex-direction: column;
+
+    li {
+        gap: 1.6rem;
+        display: flex;
+        align-items: flex-start;
+    }
+}

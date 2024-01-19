@@ -24,7 +24,6 @@ describe('Root component', () => {
         const emailInput = screen.getByRole('textbox');
         const invalidText = screen.getByText('Valid email required');
 
-
         expect(button).toBeDisabled();
 
         expect(emailInput).toBeVisible();

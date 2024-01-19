@@ -26,64 +26,6 @@
             padding: 2.4rem 0;
 
         }
-
-        &__list {
-            gap: 1rem;
-            display: flex;
-            list-style: none;
-            padding-bottom: 4rem;
-            flex-direction: column;
-
-            li {
-                gap: 1.6rem;
-                display: flex;
-                align-items: flex-start;
-            }
-        }
-
-        .input__container {
-            margin-bottom: 2.4rem;
-
-            &__label {
-                display: flex;
-                line-height: 1.5;
-                align-items: center;
-                justify-content: space-between;
-
-                >span {
-                    font-size: 1.2rem;
-                    color: variables.$tomato;
-                    font-family: "Roboto-Bold";
-                }
-
-                label {
-                    font-size: 1.2rem;
-                    font-family: "Roboto-Bold";
-                    color: variables.$dark-slate-gray;
-                }
-            }
-
-            &__input {
-                width: 100%;
-                outline: none;
-                font-size: 1.6rem;
-                line-height: 1.525;
-                margin-top: 0.8rem;
-                border-radius: 0.8rem;
-                padding: 1.5rem 2.4rem;
-                border: 1px solid variables.$gray;
-
-                &::placeholder {
-                    color: variables.$gray;
-                }
-
-                &--invalid {
-                    color: variables.$tomato;
-                    border: 1px solid variables.$tomato;
-                    background: rgba(255, 97, 85, 0.15);
-                }
-            }
-        }
     }
 }
 
